@@ -4,6 +4,9 @@ __license__ = "GPL v2"
 __maintainer__ = "Mario Lukas"
 __email__ = "info@mariolukas.de"
 
+# added search for laser.dir_ini in config file
+# added apunta fuction to set laser aiming and other minor changes for debugging
+
 import os
 import glob
 import serial
@@ -138,7 +141,6 @@ class FSSerialCom():
                 self._serial.flushInput() # Flush startup text in serial input
 		self.send("G5 D " + str(self._laserdir) + ";")
 		self._logger.debug("Envio G5 D " + str(self._laserdir) + ";")
-                #self.send("G5 D " + str(self._laserdir) + ";")
                 self._serial.readline()
                 value = self._serial.readline()
                 value = value.strip()
