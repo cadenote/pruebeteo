@@ -27,3 +27,4 @@ This parameter is read by the modified FSSerial.py file in /usr/local/lib/python
 Then the value provided is communicated to arduino througt G5 funcion implemented in firmware v.20170726.hex that has to be put in
 /usr/local/lib/python2.7/dist-packages/FabScanPi-0.4.3-py2.7.egg/fabscan/firmware directory
 
+The config file provided refers to my testing device i.e. an Arduino UNO attached to the USB0 port. If using HAT is not necessary flash?baudrate parameter in serial seccion and you have to put AMA0 port instead of USB0 port
